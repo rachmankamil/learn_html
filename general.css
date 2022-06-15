@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+@font-face {
+    font-family: 'KdamThmor';
+    font-weight: 700;
+    src: url(assets/KdamThmorPro-Regular.ttf);
+}
+
 #paragrafAlta {
     font-size: large;
+    font-family: 'KdamThmor';
     width: 50%;
     height: auto;
     background-color: aquamarine;
 }
 
-.company, #paragrafAlta, ul, li, h6 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.company {
+    font-family: 'Fascinate';
     color: coral;
 }
