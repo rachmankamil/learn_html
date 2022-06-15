@@ -11,10 +11,100 @@
     font-family: 'KdamThmor';
     width: 50%;
     height: auto;
-    background-color: aquamarine;
+    padding: 10px 100px;
+    transition: color 0.5s ease;
+    background-image: url("assets/tri_blue-600x600.jpg");
+    background-size: 100%;
+    position: relative;
+}
+
+#paragrafAlta:hover {
+    background-color: rgba(11, 11, 11, 0.7);
+    color: white
 }
 
 .company {
     font-family: 'Fascinate';
     color: coral;
+}
+
+.institute {
+    background-color: steelblue;
+    margin: 50px;
+    background-repeat: no-repeat;
+    background-color: rgba(11, 11, 11, 0.7);
+    background-position: top center;
+    background-size: 100%;
+    border: 2px solid blue;
+}
+
+.institute table, th, td {
+    border: 3px solid green;
+}
+
+.institute:hover {
+    background-color: chocolate;
+}
+
+.institute:active {
+    background-color: cyan;
+}
+
+.institute:visited {
+    background-color: blueviolet;
+}
+
+.institute:nth-child(even) {
+    background-color: aqua;
+}
+
+body {
+    margin: 0;
+}
+
+#imgGif {
+    display: none;
+}
+
+.color-red {
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.color-green {
+    background-color: green;
+    color: white;
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+
+.color-yellow {
+    background-color: gold;
+    color: black;
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#imgParagraf {
+    position: absolute;
+    top: 50%;
+    right: 50%;
 }
