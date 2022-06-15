@@ -1,0 +1,11 @@
+#paragrafAlta {
+    font-size: large;
+    width: 50%;
+    height: auto;
+    background-color: aquamarine;
+}
+
+.company, #paragrafAlta, ul, li, h6 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: coral;
+}
