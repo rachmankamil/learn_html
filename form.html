@@ -7,12 +7,12 @@
     <title>Alta Form</title>
 </head>
 <body>
-    <form action="#">
+    <form name="formPersonal" action="#" id="form-personal">
         <fieldset>
             <legend>Personal Information</legend>
             <div>
                 <label for="fullname">Fullname</label>
-                <input type="text" name="fullname" id="fullname">
+                <input type="text" name="fullname" id="fullname" onkeypress="checkLength()">
                 <br>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
@@ -39,9 +39,48 @@
                 <label for="hiking">Hiking</label>
                 
                 <br>
-                <input type="submit" value="Submit" name="submit">
+                <input type="button" value="Submit" name="submit" onclick="validasiForm()">
             </div>
         </fieldset>
     </form>
+
+    <script>
+        function validasiForm(){
+            var fName = document.getElementById("fullname")
+            var email = document.getElementById("email")
+            var age = document.getElementById("age")
+            var err = false
+
+            if (fName.value == "") {
+                fName.style.borderColor = "red"
+                err = true
+            }
+            if (email.value == "") {
+                email.style.borderColor = "red"
+                err = true
+            }
+            if (age.value == ""){
+                age.style.borderColor = "red"
+                err = true
+            }
+
+            if (err) {
+                alert("these input is required")
+            } else {
+                document.formPersonal.submit();
+            }
+        }
+    </script>
+
+    <script>
+        function checkLength(){
+            var myInput = document.getElementById("fullname")
+            if (myInput.value.length <= 8 ){
+                myInput.style.backgroundColor = 'red'
+            } else {
+                myInput.style.backgroundColor = 'white'
+            }
+        }
+    </script>
 </body>
 </html>

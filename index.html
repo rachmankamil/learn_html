@@ -17,7 +17,6 @@
     <title>Alterra Academy</title>
 </head>
 <body>
-
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -94,7 +93,10 @@
 
         </p>
         <div class="display-flex">
-            <div class="color-red">RED</div>
+            <div
+                id="kotakmainan"
+                onclick="changeColor()"
+                class="color-red">RED</div>
             <div class="color-yellow">YELLOW</div>
             <div class="color-green">GREEN</div>
         </div>
@@ -130,5 +132,21 @@
     <footer>
         &copy; 2022 Alterra Academy
     </footer>
+
+    <script>
+        document.getElementById("h1Title").innerText = "Alterra Academy Test"
+
+        function changeColor(){
+            var red = document.getElementById("kotakmainan");
+
+            if (red.innerText === "RED"){
+                red.innerText = "YELLOW";
+                red.setAttribute("class","color-yellow");
+            } else {
+                red.innerText = "RED";
+                red.setAttribute("class","color-red");
+            }
+        }
+    </script>
 </body>
 </html>
