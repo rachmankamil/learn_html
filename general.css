@@ -60,6 +60,8 @@
 
 body {
     margin: 0;
+    padding-bottom: 60px;
+    min-height: 100%;
 }
 
 #imgGif {
@@ -107,4 +109,26 @@ body {
     position: absolute;
     top: 50%;
     right: 50%;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 50%;
+    right: 10px;
+    height: 60px;
+    background-color: cyan;
+    box-shadow: 5px 5px black;
+    border-radius: 10px;
+}
+
+.imgDiv {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+}
+
+.imgDiv img {
+    width: 25vh;
+    position: absolute;
 }
