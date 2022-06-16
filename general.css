@@ -132,3 +132,26 @@ footer {
     width: 25vh;
     position: absolute;
 }
+
+div.detail{
+    height: 60px;
+    border-left: solid 3px grey;
+    padding-left: 50px;
+    margin-left: 100px;
+    padding-bottom: 50px;
+}
+
+div.rounded{
+    background-color: #19345E;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%!important;
+    position: absolute;
+    left: 92px;
+    top: 21px;
+}
+
+div.absolute{
+    position: relative;
+    width: 100%;
+}
