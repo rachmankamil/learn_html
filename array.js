@@ -79,5 +79,5 @@ let index = cpArray3.push(function(a=10, b=15){
 })
 console.table(cpArray3);
 
-console.log(cpArray3[index-1](15))
+console.log(cpArray3[index-1](10,5))
 

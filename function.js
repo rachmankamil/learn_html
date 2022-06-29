@@ -1,12 +1,14 @@
 // =========== contoh dengan fungsi =========
 
+// inisialisasi fungsi
 function luasSegitiga(alas, tinggi) {
   let area = (alas * tinggi) / 2;
-  // console.log(area);
+  console.log(area);
   return area;
 }
 
-function luasPersegi(panjang, lebar) {
+// inisialisasi fungsi ke dua
+let luasPersegi = function(panjang, lebar) {
   function check() {
     return "check";
   }
@@ -16,7 +18,13 @@ function luasPersegi(panjang, lebar) {
   return [area, "Hello"];
 }
 
+// arrow syntax
 let funcArrow = (a, b) => {
+  let total = a+b
+  return a + b;
+};
+
+(a, b) => {
   return a + b;
 };
 
@@ -57,3 +65,17 @@ let tinggi3 = 19;
 let area3 = (alas3 * tinggi3) / 2;
 
 console.log(area3);
+
+let alas4 = 8;
+let tinggi4 = 19;
+
+let area4 = (alas4 * tinggi4) / 2;
+
+console.log(area4);
+
+let alas5 = 8;
+let tinggi5 = 19;
+
+let area5 = (alas5 * tinggi5) / 2;
+
+console.log(area5);

@@ -29,9 +29,9 @@ age = 50;
 // realObject.college.name = "SMAN 1 Malang"
 
 // console.log(fName, realObject);
-console.log("person:", person);
-console.log("person2:", person2);
-console.log("objConst:", objConst);
+// console.log("person:", person);
+// console.log("person2:", person2);
+// console.log("objConst:", objConst);
 
 let confero = {
   merk: "Wuling",
@@ -44,7 +44,9 @@ let confero = {
   cekPenggunaanBensin: (jarakTempuh, jumlahBBM) => {
     return jarakTempuh/jumlahBBM
   },
-  print: function(){console.log(this)}
+  print: function(){
+    console.log(confero)
+  }
 };
 
 let almas = {
@@ -146,5 +148,3 @@ counter.increment()
 counter.increment()
 counter.increment()
 counter.decrement()
-
-console.log(luasSegitiga(10,10));
