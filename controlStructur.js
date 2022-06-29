@@ -1,3 +1,5 @@
+// ============Branching=============
+
 let umur = new Date().getFullYear() - 1992
 
 function validasiUmur(umur){
@@ -51,3 +53,124 @@ function cekNilai(nilai){
 
 cekNilai(40)
 validasiUmur(umur)
+
+
+// ============Loooping===========
+
+function ganjilgenap(angka) {
+    // normal
+    // if (angka%2 == 0){
+    //     return "genap";
+    // } else {
+    //     return "ganjil";
+    // }
+
+    // ternary
+    return (angka%2==0?"genap":"ganjil")
+}
+
+let kumpulanAngka = [24,89,60,1,9]
+
+// cara pertama
+for (let i = 0; i < kumpulanAngka.length;){
+    console.log(i, "\t", kumpulanAngka[i], "\t", ganjilgenap(kumpulanAngka[i]))
+    i++
+}
+
+// cara kedua
+let i = 0;
+while (i < kumpulanAngka.length){
+    console.log(i, "\t", kumpulanAngka[i], "\t", ganjilgenap(kumpulanAngka[i]))
+    i++
+}
+
+let bilanganPrima = 81;
+let factor = 0
+i = 0
+while (i < bilanganPrima){
+    if (bilanganPrima%i==0){factor++;}
+    if (i %2 == 0 ) continue;
+    if (factor > 2) break;
+    i++
+}
+if (factor > 2) {
+    console.log("bukan bilangan prima");
+} else {
+    console.log("bilangan prima");
+}
+
+// i    bilangan    hasil   factor
+// 0    11          11      0 
+// 1    11          0       1
+// 2    11          1       1
+// 3    11          2
+// 4    11          3
+// 5    11          1
+// ........
+
+// i    bilangan    hasil   factor
+// 0    10          10      0 
+// 1    10          0       1
+// 2    10          0       2
+// 3    10          1       2
+// 4    10          2       2
+// 5    10          0       3
+// ........
+
+// i   kumpulanAngka   ganjil/genap
+// 0   24              genap
+// 1   89              ganjil
+// 2   60              genap
+// 3   1               ganjil
+// 4   9               ganjil
+// 5
+
+
+// ============== looping object ===========
+
+let objConst = new Object();
+objConst.name = "Kamil";
+objConst.age = 29;
+objConst.address = "Malang";
+objConst.height = 175;
+objConst.hobby = ["coding","movies","driving"]
+objConst.college = {
+  name: "SMKN 4 Malang",  
+};
+
+for (const key in objConst) {
+    console.log(`obj.${key} = ${objConst[key]}`);
+}
+
+// ============== looping array ===========
+
+kumpulanAngka = [[24,89,67,90],[12,14,15],[123,90,1]]
+
+// 24  89  67  90
+// 12  14  15
+// 123 90  1
+
+// mendapatkan index
+for (const key in kumpulanAngka) {
+    console.log("key", key);
+}
+
+// mendapatkan value
+for (const iterator of kumpulanAngka) {
+    console.log("iterator", iterator);
+}
+
+// mendapatkan semua
+kumpulanAngka.forEach((value, index) => {
+    console.log("foreach",index, " => ", value);
+});
+
+objConst.hobby.forEach((value) => {
+    console.log(value);
+})
+
+kumpulanAngka.forEach((value) => {
+    value.forEach((value)=>{
+        console.log(value);
+    })
+})
