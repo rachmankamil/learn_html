@@ -40,6 +40,11 @@ let confero = {
   cruisecontrol: false,
   merk: "Toyota",
   mesin: {},
+  // METHOD FUNCTION
+  cekPenggunaanBensin: (jarakTempuh, jumlahBBM) => {
+    return jarakTempuh/jumlahBBM
+  },
+  print: function(){console.log(this)}
 };
 
 let almas = {
@@ -123,3 +128,23 @@ let gender = {
 };
 
 console.log(gender);
+
+console.log(confero.cekPenggunaanBensin(1000,10));
+
+confero.print();
+
+let counter = {
+    iterate : 0,
+    increment : function(){this.iterate++; console.log("++", this.iterate);},
+    decrement : function(){this.iterate--; console.log("--",this.iterate);}
+}
+
+counter.increment()
+counter.increment()
+counter.increment()
+counter.increment()
+counter.increment()
+counter.increment()
+counter.decrement()
+
+console.log(luasSegitiga(10,10));

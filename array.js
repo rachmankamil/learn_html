@@ -72,4 +72,12 @@ console.table(feBatch7);
 
 //slice array - motong-motong
 let cpArray3 = cpArray2.slice(10, 12);
+
+// default value
+let index = cpArray3.push(function(a=10, b=15){
+    return a-b
+})
 console.table(cpArray3);
+
+console.log(cpArray3[index-1](15))
+
