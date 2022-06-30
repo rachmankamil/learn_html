@@ -135,7 +135,7 @@ if (input < 1 || input > 30) {
 // 3   2   6
 // 3   3   9
 
-// decrement
+// decrement test commit
 for (let r = input; r>=1; r--){
     let print = ""
     for (let sp = input-r; sp>=1; sp--){
