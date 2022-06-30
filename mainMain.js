@@ -60,7 +60,11 @@ drawXYZ(5)
 
 
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let pivot = 10
+let pivot = 5 // banyaknya pergeseran huruf
+
+// =================== cara statis - cara curang
+let alphabetGeser = "FGHIJKLMNOPQRSTUVWXYZABCDE"
+console.log(alphabetGeser[alphabet.indexOf("W")])
 
 // ====================== tanpa array
 // mencari index dari char
@@ -82,9 +86,11 @@ console.log("A => ", arrAlphabet[newChar]);
 // ================ ASCII code
 let ascii = "Q".charCodeAt()
 // find new ascii char
-let newAscii = ((ascii + pivot) % 91)
-if (newAscii < 65) {newAscii += 65}
+let newAscii = 0
+let sisaPergeseran = ((ascii + pivot) % 91)
+if (sisaPergeseran < 65) {newAscii = 65 + sisaPergeseran}
 newChar = String.fromCharCode(newAscii)
+
 console.log(`Q ${ascii} => ${newChar}`)
 
 
@@ -98,3 +104,45 @@ for (let i = 0; i < name.length; i++){
     }
 }
 console.log(`${count} space found`);
+
+
+// =================== cetak table perkalian
+
+let input = 9
+if (input < 1 || input > 30) {
+    console.log(`invalid`);
+} else {
+    for (let x = 1; x <= input; x++){
+        let row = ""
+        for (let y = 1; y <= input; y++){
+            row += `${x*y}\t`
+        }
+        console.log(row);
+    }
+}
+
+// x   y   print
+
+// 1   1   1 \t
+// 1   2   2 \t
+// 1   3   3 \t -> log
+
+// 2   1   2
+// 2   2   4
+// 2   3   6
+
+// 3   1   3
+// 3   2   6
+// 3   3   9
+
+// decrement
+for (let r = input; r>=1; r--){
+    let print = ""
+    for (let sp = input-r; sp>=1; sp--){
+        print += "."
+    }
+    for (let c = r; c>=1; c--){
+        print += "# "
+    }
+    console.log(print);
+}
