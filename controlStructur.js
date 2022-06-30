@@ -35,6 +35,7 @@ function cekNilai(nilai){
     }
 
     // switch ... case ...
+    // jika pakai case perbandingan
     switch (true) {
         case nilai<50:
             console.log("Anda tidak lulus");
@@ -49,6 +50,30 @@ function cekNilai(nilai){
             console.log("Anda mendapatkan nilai bagus");
             break;
     }
+
+    // switch case dengan nilai pasti
+    nilai = "A"
+    switch (nilai) {
+        case "A":
+            console.log("Sangat Baik");
+            break;
+        case "B":
+            console.log("Baik");
+            break;
+        case "C":
+            console.log("Kurang");
+            break;
+        case "D":
+            console.log("Baik");
+            break;
+        case "E":
+            console.log("Baik");
+            break;
+        default:
+            console.log("Tidak Lulus");
+            break;
+    }
+
 }
 
 cekNilai(40)
