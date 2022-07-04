@@ -146,3 +146,51 @@ for (let r = input; r>=1; r--){
     }
     console.log(print);
 }
+
+// =============== MAX SUM ARRAY
+function maxsum(arrayNumber, m) {
+    let max = 0
+    for (let i = 0; i < arrayNumber.length-m; i++) {
+        let sum = 0
+        for (let j = 0; j < m; j++) {
+            sum += arrayNumber[i+j]
+        }
+        if (max < sum) max = sum
+    }
+    return max
+}
+
+console.log(maxsum([2, 3, 4, 1, 5], 2));
+
+// yang terjadi di function
+//array [2, 1, 5, 1, 3, 2] max 3 number
+//2+1+5 = 8
+//1+5+1 = 7
+//5+1+3 = 9 < paling besar
+//1+3+2 = 6 
+
+//  0   1   2
+//  1   2   3
+//  2   3   4
+//  3   4   5
+
+//  max 0
+//  i   j   value   sum
+//  0   0   2       2
+//  0   1   1       3
+//  0   2   5       8
+//  sum > max ? 8 > 0 ? ya, maka max = 8
+//  1   0   1       1
+//  1   1   5       6
+//  1   2   1       7
+//  sum > max ? 7 > 8 > tidak, maka max = 8
+//  2   0   
+
+// ======== love letter mistery
+// abba
+// a -> d ? 3
+// 97 - 100 ? 0
+// b -> c ? 1
+// 98 - 99 ? 0
+
+// 0+0 = 0 kalau 0 berarti palindrome

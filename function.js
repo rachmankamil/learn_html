@@ -24,11 +24,11 @@ let funcArrow = (a, b) => {
   return a + b;
 };
 
-(a, b) => {
+((a, b) => {
   return a + b;
-};
+})(9, 10);
 
-console.log(funcArrow(2, 3));
+console.log("funcArrow =>",funcArrow(2, 3));
 
 // tidak bisa karena scope / namespace
 // console.log(area);
