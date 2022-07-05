@@ -59,9 +59,9 @@ function PrimaSquare(wide, high, start) {
     return sum
 }
 
-console.log(PrimaSquare(2, 3, 13))
+// console.log(PrimaSquare(2, 3, 13))
 
-console.log(PrimaSquare(5, 2, 1))
+// console.log(PrimaSquare(5, 2, 1))
 
 // 1. LOOPING deret
 // 2. looping pertambahan
@@ -79,4 +79,6 @@ function maxSeq(arr) {
     return max
 }
 
-console.log(maxSeq([-2,1,-3,4,-1, 2, 1, -5, 4]));
+// console.log(maxSeq([-2,1,-3,4,-1, 2, 1, -5, 4]));
+
+export {checkPrima, maxSeq, checkPrimaX, PrimaSquare}

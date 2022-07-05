@@ -3,3 +3,5 @@ assets/*
 
 .env
 .prettierrc
+node_modules/*
+coverage/*
